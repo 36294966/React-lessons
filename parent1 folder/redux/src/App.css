@@ -20,6 +20,6 @@
   flex-grow: 1;
   padding: 20px;
   display: flex;
-  justify-content: flex-end; /* Align content to the right */
-  align-items: center; /* Center content vertically */
+  justify-content: flex-end;
+  align-items: center;
 }
