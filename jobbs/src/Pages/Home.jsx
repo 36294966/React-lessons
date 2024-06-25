@@ -5,6 +5,7 @@ import { FaLocationDot } from "react-icons/fa6";
 import { IoCheckbox } from "react-icons/io5";
 import { MdOutlineClear } from "react-icons/md";
 
+
 function valuetext(value) {
   return `$${value}k`;
 }

@@ -6,6 +6,8 @@ import Trending from "./Pages/Trending";
 import About from "./Pages/About";
 import Dream from "./Components/Dream";
 
+import './index.css';
+
 const App = () => {
   return (
   
@@ -13,12 +15,14 @@ const App = () => {
       
         <Navbar />
         <Dream/>
+        
   
         <Routes>
           <Route path="/" element={<Home/>} />
           <Route path="/home" element={<Home/>} />
           <Route path="/trending" element={<Trending />} />
           <Route path="/about" element={<About />} />
+          
         </Routes>
       
       </Router>
