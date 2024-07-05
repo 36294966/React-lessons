@@ -17,11 +17,10 @@ const Marketplace = () => {
         </div>
 
         <div className="w-[500px] md:shrink-0  absolute right-0 m-8 top-16 flex-end h-[550px]">
-          <img src={logo512} alt="logo512" class="md:center" />
+          <img src={logo512} alt="logo512" class="md:center " />
           <button className="bg-blue-950 absolute m-2 px-2 top-96 mt-20 w-[480px] h-[52px]">
             <span className="text-white text-xl gap-60 text-bold flex-1 px-24 ">
               Round1Quota
-              
               <button className="bg-blue-800 justify-self-end mx-4 gap-x-10 w-24 h-7">
                 <span className="text-white text-xl text-bold  justify-items-center ">
                   1588
@@ -29,16 +28,15 @@ const Marketplace = () => {
               </button>
             </span>
           </button>
-          
         </div>
         <div className="text-white py-10 px-12 mt-2">
           <button className="w-[635px] h-[70px] p-4 flex items-center bg-gradient-to-r from-[#59256D] to-[#716896] rounded-tl-lg opacity-100">
-            <span className="ml-5 gap-2 text-2xl text-bold">COMING SOON</span>
+            <span className="ml-5 gap-2   text-2xl text-bold">COMING SOON</span>
           </button>
         </div>
         <div className="text-white px-12 mt-2">
           <div className=" justify-content justify-start flex flex-row">
-            <h3 className="text-sm whitespace-nowrap mr-6 font-bold ">
+            <h3 className="text-sm whitespace-nowrap py-1 mr-6 font-bold ">
               Round 1 starts in:
             </h3>
             <div className="flex text-white text-xl space-x-4 self-auto">
@@ -59,7 +57,7 @@ const Marketplace = () => {
               </button>
             </div>
           </div>
-          <div className=" mt-8 flex-1 px-12 w-96 h-12 rounded-full bg-blue-400">
+          <div className=" mt-8 flex-1 px-12 w-96 hover:bg-sky-700 h-12 rounded-full bg-blue-400">
             <div className=" flex ">
               <button className=" justify-items-center flex-1 mt-2 ">
                 <span>Sign in to mint</span>
