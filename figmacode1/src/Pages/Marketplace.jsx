@@ -3,7 +3,7 @@ import logo512 from "../assets/logo512.png";
 
 const Marketplace = () => {
   return (
-    <div className="bg-blue-950 min-h-screen flex justify-start items-start pt-12 px-4">
+    <div className="bg-blue-950  flex justify-start items-start pt-12 px-4">
       <div className="bg-blue-950 rounded-lg w-full max-w-[523px] ml-8">
         <div className="text-start px-12 text-blue-600">
           <h2 className="text-3xl font-bold mb-2">GET YOUR OG EDITION</h2>
@@ -16,9 +16,9 @@ const Marketplace = () => {
           </p>
         </div>
 
-        <div className="w-[500px] md:shrink-0  absolute right-0 m-8 top-16 flex-end h-[550px]">
+        <div className="w-[500px]  max-w-md mx-auto absolute right-0 m-8 top-32 flex-end h-[750px]">
           <img src={logo512} alt="logo512" class="md:center " />
-          <button className="bg-blue-950 absolute m-2 px-2 top-96 mt-20 w-[480px] h-[52px]">
+          <button className="bg-blue-950 absolute my-32 m-2 px-4  top-64 w-[480px] h-[52px]">
             <span className="text-white text-xl gap-60 text-bold flex-1 px-24 ">
               Round1Quota
               <button className="bg-blue-800 justify-self-end mx-4 gap-x-10 w-24 h-7">
