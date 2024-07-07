@@ -17,7 +17,7 @@ const Marketplace = () => {
         </div>
         <div className="w-full md:w-[500px] md:flex md:flex-col max-w-md mx-auto md:absolute md:right-0 md:m-2 md:top-32 md:flex-end h-[550px] mb-0">
           <img src={logo512} alt="logo512" className="mx-auto md:mx-0" />
-          <div className="bg--950 justify-items-center m-2 mt-[-98px] w-[430px] h-[52px]">
+          <div className="bg-blue-950 justify-items-center m-2 mt-[-98px] w-[430px] h-[52px]">
             <span className="text-white justify-center text-lg text-bold my-12 px-20">
               Round1Quota
               <button className="bg-blue-800 my-4 mx-6 w-24 h-7">
@@ -26,14 +26,14 @@ const Marketplace = () => {
             </span>
           </div>
         </div>
-        <div className="text-white md:flex  md:flex-col max-w-md  md:grid-cols-2  mb-6 md-mb-2 py-1 px-12 md:my-120 mt-2">
-          <button className="w-full md:h-full display: inline-block md:w-[600px] h-[88px]  p-4  items-center bg-gradient-to-r from-[#59256D] to-[#716896] rounded-tl-lg opacity-100">
+        <div className="text-white md:flex-col max-w-md md:block  md:grid-cols-2  mb-6  py-1 px-12  mt-2">
+          <button className="  display: inline-block w-[627px] h-[88px]  min-w-full md:min-w-0 items-center bg-gradient-to-r from-[#59256D] to-[#716896] rounded-tl-lg opacity-100">
             <span className="ml-5 gap-2 text-2xl font-bold">COMING SOON</span>
           </button>
         </div>
         <div className="text-white px-12 mt-2">
           <div className="flex justify-start flex-row">
-            <h3 className="text-xl w-[233px] h-[36px] whitespace-nowrap py-1 mr-8 font-bold">
+            <h3 className="text-xl w-[233px] h-[36px] text-start-end sm:text-flex-col whitespace-nowrap py-1 mr-8 font-bold">
               Round 1 starts in:
             </h3>
             <div className="flex text-white text-xl space-x-4  ">
@@ -54,15 +54,17 @@ const Marketplace = () => {
               </button>
             </div>
           </div>
-          <div className="mt-8 flex-1 px-12 py-4 w-[265px] hover:bg-sky-700 h-[70px] rounded-full bg-blue-400">
-            <div className="flex justify-center">
-              <button className="mt-2">
-                <span>Sign in to mint</span>
-              </button>
+          <div class="flex flex-col-reverse lg:flex-col m-6 max-w-full items-center">
+            <div className="mt-8 flex-1 px-12 py-4  w-[265px] hover:bg-sky-700 h-[70px] rounded-full bg-blue-400">
+              <div className="flex justify-center">
+                <button className="mt-2">
+                  <span>Sign in to mint</span>
+                </button>
+              </div>
             </div>
-          </div>
-          <div className="text-white mt-2 px-4">
-            <p className="underline">check your mint allocation</p>
+            <div className="text-white md:w-order-first mt-2 px-4">
+              <p className="underline">check your mint allocation</p>
+            </div>
           </div>
         </div>
       </div>
