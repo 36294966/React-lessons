@@ -26,9 +26,9 @@ const Marketplace = () => {
             </span>
           </div>
         </div>
-        <div className="text-white md:flex-col max-w-md md:block  md:grid-cols-2  mb-6  py-1 px-12  mt-2">
+        <div className="text-white md:flex-col max-w-md md:block   md:grid-cols-2  mb-6  py-1 px-12  mt-2">
           <button className="  display: inline-block w-[627px] h-[88px]  min-w-full md:min-w-0 items-center bg-gradient-to-r from-[#59256D] to-[#716896] rounded-tl-lg opacity-100">
-            <span className="ml-5 gap-2 text-2xl font-bold">COMING SOON</span>
+            <span className="ml-5 gap-2 text-2xl  font-bold">COMING SOON</span>
           </button>
         </div>
         <div className="text-white px-12 mt-2">
@@ -36,11 +36,11 @@ const Marketplace = () => {
             <h3 className="text-xl w-[233px] h-[36px] text-start-end sm:text-flex-col whitespace-nowrap py-1 mr-8 font-bold">
               Round 1 starts in:
             </h3>
-            <div className="flex text-white text-xl space-x-4  ">
-              <button className="w-[64px]  h-[36px] flex items-center justify-center bg-gradient-to-r from-[#4E37B3] to-[#59256D] rounded-lg">
+            <div className="flex text-white text-xl  space-x-4  ">
+              <button className="w-[64px]  h-[36px] flex items-center   justify-center bg-gradient-to-r from-[#4E37B3] to-[#59256D] rounded-lg">
                 <span>01</span>
               </button>
-              <span className="text-gray-600 font-bold">:</span>
+              <span className="text-gray-600 font-bold ">:</span>
               <button className="w-[64px]  h-[36px] flex items-center justify-center bg-gradient-to-r from-[#4E37B3] to-[#59256D] rounded-lg">
                 <span>21</span>
               </button>
@@ -54,15 +54,15 @@ const Marketplace = () => {
               </button>
             </div>
           </div>
-          <div class="flex flex-col-reverse lg:flex-col m-6 max-w-full items-center">
+          <div class="flex flex-col-reverse lg:flex-col  max-w-full items-center">
             <div className="mt-8 flex-1 px-12 py-4  w-[265px] hover:bg-sky-700 h-[70px] rounded-full bg-blue-400">
               <div className="flex justify-center">
-                <button className="mt-2">
+                <button className="mt-2 ">
                   <span>Sign in to mint</span>
                 </button>
               </div>
             </div>
-            <div className="text-white md:w-order-first mt-2 px-4">
+            <div className="text-white hover:bg-sky-700 md:w-order-first  mt-6  px-4">
               <p className="underline">check your mint allocation</p>
             </div>
           </div>
