@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 
 const Navbar = () => {
-  const [nav,setNav] = useState(false);
+  const [nav, setNav] = useState(false);
 
   const handleNav = () => {
     setNav(!nav);
@@ -13,34 +13,73 @@ const Navbar = () => {
   return (
     <div className="bg-blue-950 flex-1 w-full">
       <div className="flex items-center justify-between max-w-[1240px] mx-auto p-4">
-        <div className="flex px-12 items-center">
-          <img src={logo} alt="Logo" className="h-12 w-30 bg-center inline-block mr-16" />
+        <div className="flex items-center">
+          <img
+            src={logo}
+            alt="Logo"
+            className="h-12 w-30 bg-center inline-block mr-16 z-50"
+          />
         </div>
-        <ul className="hidden md:flex p-2 flex-1 justify-end">
-          <li className="p-4 cursor-pointer flex items-center">
-            <Link to="/Marketplace" className="text-white">Marketplace</Link>
+        <ul className="hidden md:flex p-2 flex-1 justify-end space-x-8">
+          <li className="cursor-pointer flex items-center">
+            <Link
+              to="/Marketplace"
+              className="text-white border-b border-white w-auto inline-block"
+            >
+              Marketplace
+            </Link>
           </li>
-          <li className="p-4 cursor-pointer flex items-center">
-            <Link to="/MoreInfo" className="text-white">More Info</Link>
+          <li className="cursor-pointer flex items-center">
+            <Link
+              to="/MoreInfo"
+              className="text-white border-b border-white w-auto inline-block"
+            >
+              More Info
+            </Link>
           </li>
         </ul>
-        <div onClick={handleNav} className="block md:hidden">
-          {nav ? <AiOutlineClose size={24} className="text-white" /> : <AiOutlineMenu size={24} className="text-white" />}
+        <div onClick={handleNav} className="block md:hidden z-50">
+          {nav ? (
+            <AiOutlineClose size={24} className="text-white" />
+          ) : (
+            <AiOutlineMenu size={24} className="text-white" />
+          )}
         </div>
       </div>
       <div
         className={
           nav
-            ? "fixed left-0 top-0 w-[60%] h-full border-r border-r-gray-900 bg-white ease-in-out duration-500"
-            : "fixed left-[-100%] ease-in-out duration-500"
+            ? "fixed top-0 left-0 h-[75%] w-full border-b border-b-gray-900 bg-blue-950 ease-in-out duration-500 z-40 transform translate-y-0"
+            : "fixed top-0 left-0 h-[75%] w-full border-b border-b-gray-900 bg-blue-950 ease-in-out duration-500 z-40 transform -translate-y-full"
         }
       >
-        <ul className="uppercase p-4">
-          <li className="p-4 border-b border-gray-300 cursor-pointer">
-            <Link to="/Marketplace" onClick={handleNav} className="text-blue-900">Marketplace</Link>
+        <ul className="uppercase mt-28 p-4 space-y-20 text-center">
+          <li className="cursor-pointer">
+            <Link
+              to="/Marketplace"
+              onClick={handleNav}
+              className="text-white border-b border-white w-auto inline-block"
+            >
+              Marketplace
+            </Link>
           </li>
-          <li className="p-4 border-b border-gray-300 cursor-pointer">
-            <Link to="/MoreInfo" onClick={handleNav} className="text-blue-900">More Info</Link>
+          <li className="cursor-pointer">
+            <Link
+              to="/MoreInfo"
+              onClick={handleNav}
+              className="text-white border-b border-white w-auto inline-block"
+            >
+              More Info
+            </Link>
+          </li>
+          <li className="cursor-pointer">
+            <Link
+              to="/Sign in to Mint"
+              onClick={handleNav}
+              className="text-white border-b border-white w-auto inline-block"
+            >
+              Sign in to Mint
+            </Link>
           </li>
         </ul>
       </div>
