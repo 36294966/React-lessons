@@ -11,8 +11,8 @@ const Navbar = () => {
   };
 
   return (
-    <div className="bg-blue-950 flex-1 w-full">
-      <div className="flex items-center justify-between max-w-[1240px] mx-auto p-4">
+    <div className="relative">
+      <div className="bg-blue-950 flex items-center justify-between max-w-[1500px] mx-auto p-4">
         <div className="flex items-center">
           <img
             src={logo}
@@ -46,14 +46,29 @@ const Navbar = () => {
           )}
         </div>
       </div>
+
       <div
         className={
           nav
-            ? "fixed top-0 left-0 h-[75%] w-full border-b border-b-gray-900 bg-blue-950 ease-in-out duration-500 z-40 transform translate-y-0"
-            : "fixed top-0 left-0 h-[75%] w-full border-b border-b-gray-900 bg-blue-950 ease-in-out duration-500 z-40 transform -translate-y-full"
+            ? "fixed top-0 left-0 h-screen w-screen bg-black opacity-80 z-40 backdrop-blur-lg"
+            : "hidden"
+        }
+        onClick={handleNav}
+      ></div>
+      <div
+        className={
+          nav
+            ? "fixed top-0 left-0 h-[90%] w-full border-b border-b-gray-900 bg-blue-950 ease-in-out duration-500 z-40 transform translate-y-0"
+            : "fixed top-0 left-0 h-[90%] w-full border-b border-b-gray-900 bg-blue-950 ease-in-out duration-500 z-40 transform -translate-y-full"
         }
       >
-        <ul className="uppercase mt-28 p-4 space-y-20 text-center">
+        <ul
+          className={
+            nav
+              ? "uppercase mt-28 p-4 space-y-20 text-center md:hidden"
+              : "uppercase mt-28 p-4 space-y-20 text-center hidden md:flex"
+          }
+        >
           <li className="cursor-pointer">
             <Link
               to="/Marketplace"

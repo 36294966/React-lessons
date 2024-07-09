@@ -21,7 +21,7 @@ const Marketplace = () => {
             alt="logo512"
             className=" flex flex-nowrap mx-auto md:mx-0"
           />
-          <div className="bg-blue-950 justify-items-center m-2 mt-[-98px] w-[430px] h-[52px]">
+          <div className="bg-blue-950 md:visible justify-items-center m-2 mt-[-98px] w-[430px] h-[52px]">
             <span className="text-white justify-center text-lg text-bold my-12 px-20">
               Round1Quota
               <button className="bg-blue-800 my-4 mx-6 w-24 h-7">
@@ -30,8 +30,8 @@ const Marketplace = () => {
             </span>
           </div>
         </div>
-        <div className="text-white md:flex-col max-w-md md:w-full md:flex-start md:grid-cols-2  mb-6 mt-2">
-          <button className="w-[627px]  h-[88px]  min-w-full  bg-gradient-to-r from-[#59256D] to-[#716896] rounded-tl-lg opacity-100">
+        <div className="text-white max-w-md  mb-6 mt-12">
+          <button className="md:w-[1200px] w-full h-[88px]  bg-gradient-to-r from-[#59256D] to-[#716896] rounded-tl-lg opacity-100">
             <span className="text-2xl  font-bold">COMING SOON</span>
           </button>
         </div>
