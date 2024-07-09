@@ -3,7 +3,7 @@ import logo512 from "../assets/logo512.png";
 
 const Marketplace = () => {
   return (
-    <div className="bg-blue-950 min-h-screen flex justify-start items-start pt-12 px-4">
+    <div className="bg-blue-950 max-w-1200 flex  items-start pt-12 px-4">
       <div className="bg-blue-950 rounded-lg w-full  max-w-[523px] md:w-auto md:max-w-[523px] ml-8">
         <div className="text-start  text-blue-600">
           <h2 className="text-3xl font-bold mb-2">GET YOUR OG EDITION</h2>
@@ -21,22 +21,22 @@ const Marketplace = () => {
             alt="logo512"
             className=" flex flex-nowrap mx-auto md:mx-0"
           />
-          <div className="bg-blue-950 md:visible justify-items-center m-2 mt-[-98px] w-[430px] h-[52px]">
-            <span className="text-white justify-center text-lg text-bold my-12 px-20">
-              Round1Quota
-              <button className="bg-blue-800 my-4 mx-6 w-24 h-7">
-                <span className="text-white text-xl text-bold">1588</span>
-              </button>
-            </span>
-          </div>
+        <div className="bg-blue-950 items-center justify-center  mt-[-98px] w-[430px] h-[52px]">
+  <span className="text-white justify-center text-lg font-bold my-12 px-20">
+    Round1Quota
+    <button className="bg-blue-800 my-4 mx-6 w-24 h-7 md:inline-block">
+      <span className="text-white text-xl font-bold">1588</span>
+    </button>
+    </span>
+    </div> 
         </div>
-        <div className="text-white max-w-md  mb-6 mt-12">
-          <button className="md:w-[1200px] w-full h-[88px]  bg-gradient-to-r from-[#59256D] to-[#716896] rounded-tl-lg opacity-100">
+        <div className="text-white md:flex-grow  mb-6 mt-12">
+          <button className="sm:w-[627px] w-full h-[88px]  bg-gradient-to-r from-[#59256D] to-[#716896] rounded-tl-lg opacity-100">
             <span className="text-2xl  font-bold">COMING SOON</span>
           </button>
         </div>
 
-        <div className="text-white px-0 mt-2 ">
+        <div className="text-white mt-2 ">
           <div className=" flex flex-col items-center md:flex-row md:justify-center md:items-center">
             <h3 className="text-xl w-full md:w-auto h-[36px] p-4 text-center md:text-start whitespace-nowrap py-1 font-bold">
               Round 1 starts in:
