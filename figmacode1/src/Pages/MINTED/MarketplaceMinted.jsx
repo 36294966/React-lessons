@@ -1,5 +1,8 @@
 import React from "react";
 import logo512 from "../../assets/logo512.png";
+import { MdOutlineWarningAmber } from "react-icons/md";
+import { IoCloseSharp } from "react-icons/io5";
+
 
 const MarketplaceMinted = () => {
   return (
@@ -9,23 +12,36 @@ const MarketplaceMinted = () => {
           <h2 className="text-3xl font-bold mb-2">GET YOUR OG EDITION</h2>
           <h2 className="text-3xl font-bold mb-2">MYTHICAL BUDDY!</h2>
         </div>
-        <div className="text-white  mt-8">
+        <div className="text-white flex-wrap-nowrap  mt-8">
           <p>
             To celebrate our major product launch this year, we are offering a
             FREE mint of 1988 OG Edition Mythical Buddy NFTs
           </p>
         </div>
-        <div className="w-full md:w-[500px] md:flex md:flex-col  max-w-md mx-auto 
-        md:absolute md:right-24 md:m-2 md:top-32  h-[550px] mb-0">
+        <div
+          className="w-full md:w-[500px] md:flex md:flex-col  max-w-md mx-auto 
+        md:absolute md:right-24 md:m-2 md:top-32  h-[550px] mb-0"
+        >
           <img
             src={logo512}
             alt="logo512"
             className=" flex flex-nowrap mx-auto md:mx-0"
           />
-          <div className="bg-red-600  ml-48 absolute -mt-6 flex-nowrap w-[356px] h-[74px] ">
-          <button className="text-white"></button>
-        </div>
-
+        
+            <div className="bg-red-600 flex  absolute  ml-44 -mt-6 flex-wrap-nowrap w-[396px] h-[74px] p-2 ">
+              <button className="text-white m-4 flex-wrap-nowrap text-center">
+             
+              <MdOutlineWarningAmber className=" mr-2 justify-start" />
+              <IoCloseSharp className="ml-96 px-4"/>
+                <p className="-mt-10 -ml-20">
+                  You are not eligible for this round. <br/>
+                  Check your mint allocation
+                  
+                </p>
+                
+              </button>
+            
+          </div>
           <div className="bg-blue-950 flex-wrap items-center justify-center mt-[-98px] w-[430px] h-[52px]">
             <span className="text-white justify-center text-lg font-bold px-20">
               Round1Quota
