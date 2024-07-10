@@ -3,8 +3,8 @@ import logo512 from "../../assets/logo512.png";
 
 const MarketplaceMinted = () => {
   return (
-    <div className="bg-blue-950 max-w- h-full md:justify-items-center flex items-start pt-12 px-4">
-      <div className="bg-blue-950 rounded-lg w-full  max-w-[523px] md:w-auto md:max-w-[523px] ml-8">
+    <div className="bg-blue-950 max-w- h-full md:justify-items-center  pt-12 px-4">
+      <div className="bg-blue-950 rounded-lg w-full md:w-auto md:max-w-[523px] ml-8">
         <div className="text-start  text-blue-600">
           <h2 className="text-3xl font-bold mb-2">GET YOUR OG EDITION</h2>
           <h2 className="text-3xl font-bold mb-2">MYTHICAL BUDDY!</h2>
@@ -15,17 +15,19 @@ const MarketplaceMinted = () => {
             FREE mint of 1988 OG Edition Mythical Buddy NFTs
           </p>
         </div>
-        <div className="w-full md:w-[500px] md:flex md:flex-col max-w-md mx-auto md:absolute md:right-0 md:m-2 md:top-32 md:flex-end h-[550px] mb-0">
+        <div className="w-full md:w-[500px] md:flex md:flex-col  max-w-md mx-auto 
+        md:absolute md:right-24 md:m-2 md:top-32  h-[550px] mb-0">
           <img
             src={logo512}
             alt="logo512"
             className=" flex flex-nowrap mx-auto md:mx-0"
           />
-          <div className="bg-red-600 w-[459px] h-[74px] border-[1px]">
-            <button className="text-white"></button>
-          </div>
-          <div className="bg-blue-950 flex-nowrap items-center justify-center  mt-[-98px] w-[430px] h-[52px]">
-            <span className="text-white justify-center text-lg font-bold my-12 px-20">
+          <div className="bg-red-600  ml-48 absolute -mt-6 flex-nowrap w-[356px] h-[74px] ">
+          <button className="text-white"></button>
+        </div>
+
+          <div className="bg-blue-950 flex-wrap items-center justify-center mt-[-98px] w-[430px] h-[52px]">
+            <span className="text-white justify-center text-lg font-bold px-20">
               Round1Quota
               <button className="bg-blue-800 my-4 mx-6 w-24 h-7 md:inline-block">
                 <span className="text-white text-xl font-bold">1588</span>
@@ -33,9 +35,9 @@ const MarketplaceMinted = () => {
             </span>
           </div>
         </div>
-        <div className="text-white md:flex-grow  mb-6 mt-12">
+        <div className="text-white md:flex-grow   mb-6 mt-12">
           <button className="sm:w-[627px] w-full h-[88px]  bg-gradient-to-r from-[#59256D] to-[#716896] rounded-tl-lg opacity-100">
-            <span className="text-white p-4 flex flex-start text-2xl font-bold">
+            <span className="text-white p-8 flex flex-start text-2xl font-bold">
               Round1-Guaranteed mint
             </span>
           </button>
@@ -72,7 +74,7 @@ const MarketplaceMinted = () => {
                 </button>
               </div>
             </div>
-            <div className="text-white md:w-order-first  mt-6  px-4">
+            <div className="text-white md:w-order-first  mt-4  px-4">
               <p className="underline">check your mint allocation</p>
             </div>
           </div>
