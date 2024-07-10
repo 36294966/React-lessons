@@ -12,15 +12,15 @@ const Navbar = () => {
 
   return (
     <div className="relative">
-      <div className="bg-blue-950 flex items-center justify-between max-w-[1500px] mx-auto p-4">
-        <div className="flex items-center">
+      <div className="bg-blue-950  flex items-center justify-between max-w-[1500px] mx-auto p-4">
+        <div className="flex  px-8 items-center">
           <img
             src={logo}
             alt="Logo"
             className="h-12 w-30 bg-center inline-block mr-16 z-50"
           />
         </div>
-        <ul className="hidden md:flex p-2 flex-1 justify-end space-x-8">
+        <ul className="hidden md:flex p-4 mr-32 flex-1 justify-end space-x-16">
           <li className="cursor-pointer flex items-center">
             <Link
               to="/Marketplace"

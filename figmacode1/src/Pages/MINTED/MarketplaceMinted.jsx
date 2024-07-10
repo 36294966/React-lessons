@@ -6,7 +6,7 @@ import { IoCloseSharp } from "react-icons/io5";
 
 const MarketplaceMinted = () => {
   return (
-    <div className="bg-blue-950 max-w- h-full md:justify-items-center  pt-12 px-4">
+    <div className="bg-blue-950  h-full  md:justify-items-center pt-12 px-4">
       <div className="bg-blue-950 rounded-lg w-full md:w-auto md:max-w-[523px] ml-8">
         <div className="text-start  text-blue-600">
           <h2 className="text-3xl font-bold mb-2">GET YOUR OG EDITION</h2>
@@ -28,15 +28,15 @@ const MarketplaceMinted = () => {
             className=" flex flex-nowrap mx-auto md:mx-0"
           />
         
-            <div className="bg-red-600 flex  absolute  ml-44 -mt-6 flex-wrap-nowrap w-[396px] h-[74px] p-2 ">
+            <div className="bg-red-600  fixed mr-4 top-0 right-0 md:ml-36  mt-24
+             flex-nowrap w-[396px] h-[74px] p-2 ">
               <button className="text-white m-4 flex-wrap-nowrap text-center">
-             
+              
               <MdOutlineWarningAmber className=" mr-2 justify-start" />
-              <IoCloseSharp className="ml-96 px-4"/>
-                <p className="-mt-10 -ml-20">
+              <IoCloseSharp className="ml-80 -mt-4"/>
+                <p className="-mt-4 px-8">
                   You are not eligible for this round. <br/>
                   Check your mint allocation
-                  
                 </p>
                 
               </button>
