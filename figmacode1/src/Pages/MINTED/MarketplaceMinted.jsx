@@ -1,19 +1,22 @@
 import React from "react";
-import logo512 from "../../assets/logo512.png";
-import { MdOutlineWarningAmber } from "react-icons/md";
 import { IoCloseSharp } from "react-icons/io5";
-
+import { MdOutlineWarningAmber } from "react-icons/md";
+import logo512 from "../../assets/logo512.png";
 
 const MarketplaceMinted = () => {
   return (
     <div className="bg-blue-950  h-full  md:justify-items-center pt-12 px-4">
       <div className="bg-blue-950 rounded-lg w-full md:w-auto md:max-w-[523px] ml-8">
         <div className="text-start  text-blue-600">
-          <h2 className="text-3xl font-bold mb-2">GET YOUR OG EDITION</h2>
-          <h2 className="text-3xl font-bold mb-2">MYTHICAL BUDDY!</h2>
+          <h2 className="text-3xl font-bold mb-2 hidden md:block">
+            GET YOUR OG EDITION
+          </h2>
+          <h2 className="text-3xl font-bold mb-2 hidden md:block">
+            MYTHICAL BUDDY!
+          </h2>
         </div>
-        <div className="text-white flex-wrap-nowrap  mt-8">
-          <p>
+        <div className="text-white flex-wrap-nowrap  mt-8 ">
+          <p className="hidden md:block">
             To celebrate our major product launch this year, we are offering a
             FREE mint of 1988 OG Edition Mythical Buddy NFTs
           </p>
@@ -27,22 +30,26 @@ const MarketplaceMinted = () => {
             alt="logo512"
             className=" flex flex-nowrap mx-auto md:mx-0"
           />
-        
-            <div className="bg-red-600  fixed mr-4 top-0 right-0 md:ml-36  mt-24
-             flex-nowrap w-[396px] h-[74px] p-2 ">
-              <button className="text-white m-4 flex-wrap-nowrap text-center">
-              
-              <MdOutlineWarningAmber className=" mr-2 justify-start" />
-              <IoCloseSharp className="ml-80 -mt-4"/>
-                <p className="-mt-4 px-8">
-                  You are not eligible for this round. <br/>
+          <div className="flex-grow md:flex-grow-0">
+            <div
+              className="bg-red-600 flex items-center justify-end mr-0 md:mr-4 fixed 
+              top-0 right-0  mt-24
+             flex-wrap-nowrap md:w-[396px] w-[100%] h-[74px] "
+            >
+              <button className="text-white m-4  text-center">
+                <MdOutlineWarningAmber className="md:mr-0 mr-2 justify-start" />
+                <IoCloseSharp className="ml-80 -mt-4" />
+                <p className="-mt-4 px-8 ">
+                  You are not eligible for this round. <br />
                   Check your mint allocation
                 </p>
-                
               </button>
-            
+            </div>
           </div>
-          <div className="bg-blue-950 flex-wrap items-center justify-center mt-[-98px] w-[430px] h-[52px]">
+          <div
+            className="bg-blue-950 flex-wrap items-center justify-center mt-[-98px] w-[100%]
+          md:w-[430px] h-[52px]"
+          >
             <span className="text-white justify-center text-lg font-bold px-20">
               Round1Quota
               <button className="bg-blue-800 my-4 mx-6 w-24 h-7 md:inline-block">
@@ -51,9 +58,9 @@ const MarketplaceMinted = () => {
             </span>
           </div>
         </div>
-        <div className="text-white md:flex-grow   mb-6 mt-12">
-          <button className="sm:w-[627px] w-full h-[88px]  bg-gradient-to-r from-[#59256D] to-[#716896] rounded-tl-lg opacity-100">
-            <span className="text-white p-8 flex flex-start text-2xl font-bold">
+        <div className="text-white mb-6 mt-12">
+          <button className=" md:w-[627px] w-[100%] h-[88px]  bg-gradient-to-r from-[#59256D] to-[#716896] rounded-tl-lg opacity-100">
+            <span className="text-white  flex flex-start text-2xl font-bold">
               Round1-Guaranteed mint
             </span>
           </button>

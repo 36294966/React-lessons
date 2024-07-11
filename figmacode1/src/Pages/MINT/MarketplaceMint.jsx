@@ -22,7 +22,7 @@ const MarketplaceMint = () => {
             className=" flex flex-nowrap mx-auto md:mx-0"
           />
           <div className="bg-blue-950 flex-nowrap items-center justify-center  mt-[-98px] w-[430px] h-[52px]">
-            <span className="text-white justify-center text-lg font-bold my-12 px-20">
+            <span className="text-white justify-center text-lg font-bold my-12 px-16">
               Round1Quota
               <button className="bg-blue-800 my-4 mx-6 w-24 h-7 md:inline-block">
                 <span className="text-white text-xl font-bold">1588</span>
