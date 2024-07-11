@@ -1,55 +1,29 @@
 import React from "react";
-import { IoCloseSharp } from "react-icons/io5";
-import { MdOutlineWarningAmber } from "react-icons/md";
 import logo512 from "../../assets/logo512.png";
+import { RxCross1 } from "react-icons/rx";
 
-const MarketplaceMinted = () => {
+const MarketplaceCongratulation = () => {
   return (
-    <div className="bg-blue-950  h-full  md:justify-items-center pt-12 px-4">
-      <div className="bg-blue-950 rounded-lg w-full md:w-auto md:max-w-[523px] ml-8">
+    <div className="bg-blue-950 max-w- md:justify-items-center flex items-start pt-12 px-4">
+      <div className="bg-blue-950 rounded-lg w-full  max-w-[523px] md:w-auto md:max-w-[523px] ml-8">
         <div className="text-start  text-blue-600">
-          <h2 className="text-3xl font-bold mb-2 hidden md:block">
-            GET YOUR OG EDITION
-          </h2>
-          <h2 className="text-3xl font-bold mb-2 hidden md:block">
-            MYTHICAL BUDDY!
-          </h2>
+          <h2 className="text-3xl font-bold mb-2">GET YOUR OG EDITION</h2>
+          <h2 className="text-3xl font-bold mb-2">MYTHICAL BUDDY!</h2>
         </div>
-        <div className="text-white flex-wrap-nowrap  mt-8 ">
-          <p className="hidden md:block">
+        <div className="text-white  mt-8">
+          <p>
             To celebrate our major product launch this year, we are offering a
             FREE mint of 1988 OG Edition Mythical Buddy NFTs
           </p>
         </div>
-        <div
-          className="w-full md:w-[500px] md:flex md:flex-col  max-w-md mx-auto 
-        md:absolute md:right-24 md:m-2 md:top-32  h-[550px] mb-0"
-        >
+        <div className="w-full md:w-[500px] md:flex md:flex-col max-w-md mx-auto md:absolute md:right-0 md:m-2 md:top-32 md:flex-end h-[550px] mb-0">
           <img
             src={logo512}
             alt="logo512"
             className=" flex flex-nowrap mx-auto md:mx-0"
           />
-          <div className="flex-grow md:flex-grow-0">
-            <div
-              className="bg-red-600 flex items-center justify-end mr-0 md:mr-4 fixed 
-              top-0 right-0  mt-24
-             flex-wrap-nowrap md:w-[396px] w-[100%] h-[74px] "
-            >
-              <button className="text-white m-4  text-center">
-                <MdOutlineWarningAmber className="md:mr-0 mr-2 justify-start" />
-                <IoCloseSharp className="ml-80 -mt-4" />
-                <p className="-mt-4 px-8 ">
-                  Max 1 NFT per wallet<br />
-                </p>
-              </button>
-            </div>
-          </div>
-          <div
-            className="bg-blue-950 flex-wrap items-center justify-center mt-[-98px] w-[100%]
-          md:w-[430px] h-[52px]"
-          >
-            <span className="text-white justify-center text-lg font-bold px-20">
+          <div className="bg-blue-950 flex-nowrap items-center justify-center  mt-[-98px] w-[430px] h-[52px]">
+            <span className="text-white justify-center text-lg font-bold my-12 px-16">
               Round1Quota
               <button className="bg-blue-800 my-4 mx-6 w-24 h-7 md:inline-block">
                 <span className="text-white text-xl font-bold">1588</span>
@@ -57,13 +31,45 @@ const MarketplaceMinted = () => {
             </span>
           </div>
         </div>
-        <div className="text-white mb-6 mt-12">
-          <button className=" w-[627px] sm:w-[100%] h-[88px]  bg-gradient-to-r from-[#59256D] to-[#716896] rounded-tl-lg opacity-100">
-            <span className="text-white  flex flex-start text-2xl font-bold">
+
+        <div className=" bg-black w-[680px] h-[480px] rounded-xl absolute -mt-40 ml-72 z-30">
+        
+          <div className="text-center mt-20">
+            <h className="text-white text-2xl text-center">Congratulations!</h>
+            <div className="text-white text-xl p-6">
+                
+              <p>
+                You've successfully minted the Egg.check <br />
+                Marketplace inventory to see the egg
+              </p>
+              <div className="text-red-600 p-8">
+                <p>
+                  Do not forget to do KYC within 30 <br />
+                  otherwise your account will be suspended <br />
+                  <p className="text-underline">find out more</p>
+                </p>
+                
+                <div className="flex items-center justify-center">
+                  < div className=" bg-blue-400 rounded-full mt-16 w-[265px] h-[70px]">
+                    <button className="text-white mt-4">
+                        <p>check Inventory</p>
+                        
+                    </button>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="text-white md:flex-grow  mb-6 mt-12">
+          <button className="sm:w-[627px] w-full h-[88px]  bg-gradient-to-r from-[#59256D] to-[#716896] rounded-tl-lg opacity-100">
+            <span className="text-2xl p-8 flex flex-start font-bold">
               Round1-Guaranteed mint
             </span>
           </button>
         </div>
+
         <div className="text-white mt-2 ">
           <div className=" flex flex-col items-center md:flex-row md:justify-center md:items-center">
             <h3 className="text-xl w-full md:w-auto h-[36px] p-4 text-center md:text-start whitespace-nowrap py-1 font-bold">
@@ -88,15 +94,15 @@ const MarketplaceMinted = () => {
             </div>
           </div>
 
-          <div class="flex flex-col-reverse lg:flex-col  max-w-full items-center">
-            <div className="mt-8 flex-1 px-12 py-4  w-[265px]  h-[70px] rounded-full bg-gray-700">
+          <div class="flex flex-col-reverse lg:flex-col  max-w-full items-start">
+            <div className="mt-8 flex-1 px-12 py-4  w-[265px] hover:bg-sky-700 h-[70px] rounded-full bg-gray-600">
               <div className="flex justify-center">
                 <button className="mt-2 ">
                   <span>MINTED</span>
                 </button>
               </div>
             </div>
-            <div className="text-white md:w-order-first  mt-4  px-4">
+            <div className="text-white md:w-order-first  mt-6  px-4">
               <p className="underline">check your mint allocation</p>
             </div>
           </div>
@@ -105,5 +111,4 @@ const MarketplaceMinted = () => {
     </div>
   );
 };
-
-export default MarketplaceMinted;
+export default MarketplaceCongratulation;
