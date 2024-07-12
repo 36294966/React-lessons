@@ -31,40 +31,44 @@ const MarketplaceCongratulation = () => {
             </span>
           </div>
         </div>
-
-        <div className=" bg-black md:w-[680px] w-full h-[480px] flex:wrap-nowrap md-h-[480px] md:flex md:flex-col  mx-auto 
-         rounded-xl border-blue-500 absolute -mt-40 ml-48 z-30">
-    <div className="flex items-end justify-end mt-2 mr-2">
-        <RxCross1 className="text-white text-2xl relative " />
-        </div>
-        <div className="text-white flex items-center justify-center ">
-        <img src="congrats.png" alt="congrats.png" className="rounded-full -mt-12" />
-        </div>
-          <div className="text-center mt-20">
-            <h className="text-white text-2xl text-center">Congratulations!</h>
-            <div className="text-white text-xl p-6">
-              
-
+        <div className="flex-nowrap-wrap">
+          <div
+            className=" bg-black md:w-[680px] w-max-auto md:h-[480px]  h-max-auto md:flex md:flex-col
+         rounded-xl border-blue-500 md:absolute  md:-mt-40 md:mb-0 ml-0 md:ml-48 z-30"
+          >
+            <div className="flex items-end justify-end mt-2 mr-2">
+              <RxCross1 className="text-white text-2xl relative " />
+            </div>
+            <div className="text-white flex items-center justify-center ">
+              <img
+                src="congrats.png"
+                alt="congrats.png"
+                className="rounded-full -mt-12"
+              />
+            </div>
+            <div className="text-center mt-20">
+              <h className="text-white text-2xl text-center">
+                Congratulations!
+              </h>
+              <div className="text-white text-xl p-6">
                 <p>
                   You've successfully minted the Egg.check <br />
                   Marketplace inventory to see the egg
                 </p>
                 <div className="text-red-600 p-8">
                   <p>
-                    Do not forget to do KYC within 30 days<br />
+                    Do not forget to do KYC within 30 days
+                    <br />
                     otherwise your account will be suspended <br />
                     <p className="text-underline">find out more</p>
                   </p>
 
                   <div className="flex items-center justify-center">
-                    <
-                      div
-                      className=" bg-blue-400 rounded-full mt-12 w-[265px] h-[70px]"
-                    >
+                    <div className=" bg-blue-400 rounded-full mt-12 w-[265px] h-[70px]">
                       <button className="text-white mt-4">
                         <p>check Inventory</p>
                       </button>
-                    
+                    </div>
                   </div>
                 </div>
               </div>
