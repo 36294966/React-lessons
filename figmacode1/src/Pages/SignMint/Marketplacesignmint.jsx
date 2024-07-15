@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import logo512 from  "../../assets/logo512.png";
+import Modalsign from "../../Components/Modalsign";
 
-const Marketplace = () => {
+
+function App() {
+  const [showModalsign, setShowModalsign] = useState(false);
+
+const Marketplacesignmint= () => {
   return (
     <div className="bg-blue-950 max-w-1500 md:justify-items-center flex items-start pt-12 px-4">
       <div className="bg-blue-950 rounded-lg w-full  max-w-[523px] md:w-auto md:max-w-[523px] ml-8">
@@ -63,9 +68,10 @@ const Marketplace = () => {
           <div class="flex flex-col-reverse lg:flex-col  max-w-full items-center">
             <div className="mt-8 flex-1 px-12 py-4  w-[265px] hover:bg-sky-700 h-[70px] rounded-full bg-blue-400">
               <div className="flex justify-center">
-                <button className="mt-2 ">
+              <button onClick={() => setShowModalsign(true)} className="mt-2">
                   <span>Sign in to mint</span>
                 </button>
+                {showModalsign && <Modalsign onClose={() => setShowModalsign(false)} />}
               </div>
             </div>
             <div className="text-white md:w-order-first  mt-6  px-4">
@@ -78,4 +84,8 @@ const Marketplace = () => {
   );
 };
 
-export default Marketplace;
+return <Marketplacesignmint/>;
+}
+
+
+export default App;
