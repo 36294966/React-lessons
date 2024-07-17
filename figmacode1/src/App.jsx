@@ -10,12 +10,14 @@ import MarketplaceCongratulation from "./Pages/Congratulation/MarketplaceCongrat
 import Marketplacenoteligible from  "./Pages/MINTnoteligible/Marketplacenoteligible";
 import Marketplacesignmint from  "./Pages/SignMint/Marketplacesignmint";
 import Marketplacesignup  from "./Pages/Signupmint/Marketplacesignup";
+import Marketplaceverifyopt from "./Pages/Marketplaceverifyopt/Marketplaceverifyopt";
 const App = () => {
   return (
     <Router>
       <Navbar/>
       
       <Routes>
+        <Route path="Marketplaceverifyopt" element ={<Marketplaceverifyopt/>}/>
         <Route path ="/Marketplacesignup" element ={<Marketplacesignup/>}/>
         <Route path ="/Marketplacesignmint" element={<Marketplacesignmint/>}/>
         <Route path="/Marketplacenoteligible" element={< Marketplacenoteligible/>}/>
