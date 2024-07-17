@@ -6,9 +6,8 @@ import FormGroup from "@mui/material/FormGroup";
 import IconButton from "@mui/material/IconButton";
 import InputAdornment from "@mui/material/InputAdornment";
 import TextField from "@mui/material/TextField";
-import { X, } from "lucide-react";
+import { X } from "lucide-react";
 import React, { useRef, useState } from "react";
-
 
 function ReusableInput({
   label,
@@ -17,7 +16,8 @@ function ReusableInput({
   setValue,
   showPassword,
   setShowPassword,
-  error
+  error,
+  errorMessage
 }) {
   const handleChange = (event) => {
     setValue(event.target.value);
@@ -42,7 +42,7 @@ function ReusableInput({
         value={value}
         onChange={handleChange}
         error={error}
-        helperText={error ? "Password must be at least 8 characters." : ""}
+        helperText={error ? errorMessage : ""}
         InputProps={{
           style: {
             color: "white",
@@ -83,16 +83,16 @@ function Modal({ onClose }) {
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
   const modalRef = useRef();
   const [inputs, setInputs] = useState([
-    { label: "Address ", type: "text", value: "NY 11379,USA", showPassword: false },
-    { label: "ZIP code", type: "text", value: "1234", showPassword: false  },
+    { label: "Address", type: "text", value: "NY 11379, USA", showPassword: false },
+    { label: "ZIP code", type: "text", value: "1234", showPassword: false },
     { label: "Date of birth", type: "password", value: "19/02/1984", showPassword: false },
-    { label: "Nationality", type: "password",value: "ARE",showPassword: false},
+    { label: "Nationality", type: "text", value: "ARE", showPassword: false },
     {
-      label: "Country of Residence)",
+      label: "Country of Residence",
       type: "text",
       value: "Wakanda",
       showPassword: false
-    },
+    }
   ]);
   const [errors, setErrors] = useState({});
   const [checkboxes, setCheckboxes] = useState({
@@ -111,15 +111,21 @@ function Modal({ onClose }) {
     newInputs[index].value = value;
     setInputs(newInputs);
 
-    if (newInputs[index].label === "Password" && value.length < 8) {
+    if (newInputs[index].label === "Nationality" && value === "ARE") {
       setErrors((prevErrors) => ({
         ...prevErrors,
-        password: true
+        nationality: "Cannot register an account with this nationality."
       }));
-    } else if (newInputs[index].label === "Password" && value.length >= 8) {
+    } else if (newInputs[index].label === "Country of Residence" && value === "Wakanda") {
       setErrors((prevErrors) => ({
         ...prevErrors,
-        password: false
+        country: "Cannot register an account from this country."
+      }));
+    } else {
+      setErrors((prevErrors) => ({
+        ...prevErrors,
+        nationality: false,
+        country: false
       }));
     }
   };
@@ -147,11 +153,6 @@ function Modal({ onClose }) {
       <div
         className="absolute bg-black border-2 w-[900px] h-[610px] border-white rounded-xl px-28 
         py-4 flex flex-col gap-0 items-center"
-        // style={{
-        //   width: isSmallScreen ? "90%" : "auto",
-        //   maxWidth: isSmallScreen ? "100%" : "900px",
-        //   margin: isSmallScreen ? "0 16px" : "32px 0"
-        // }}
       >
         <div onClick={onClose} className="absolute top-4 right-4 cursor-pointer">
           <X size={28} className="text-white" />
@@ -176,9 +177,20 @@ function Modal({ onClose }) {
                 ? () => handleShowPasswordToggle(index)
                 : undefined
             }
-            error={input.label === "Password" && errors.password}
+            error={
+              (input.label === "Nationality" && !!errors.nationality) ||
+              (input.label === "Country of Residence" && !!errors.country)
+            }
+            errorMessage={
+              input.label === "Nationality"
+                ? errors.nationality
+                : input.label === "Country of Residence"
+                ? errors.country
+                : ""
+            }
           />
         ))}
+
         <form>
           <button
             className="mt-4 flex items-center justify-center rounded-full bg-gray-600 w-[250px] h-[65px] text-white"
@@ -192,3 +204,5 @@ function Modal({ onClose }) {
 }
 
 export default Modal;
+
+
