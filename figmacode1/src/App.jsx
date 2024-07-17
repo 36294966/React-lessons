@@ -9,14 +9,16 @@ import MoreInfoMinted from "./Pages/MINTED/MoreInfoMinted";
 import MarketplaceCongratulation from "./Pages/Congratulation/MarketplaceCongratulation";
 import Marketplacenoteligible from  "./Pages/MINTnoteligible/Marketplacenoteligible";
 import Marketplacesignmint from  "./Pages/SignMint/Marketplacesignmint";
+import Marketplacesignup  from "./Pages/Signupmint/Marketplacesignup";
 const App = () => {
   return (
     <Router>
       <Navbar/>
       
       <Routes>
-        <Route path ="Marketplacesignmint" element={<Marketplacesignmint/>}/>
-        <Route path="Marketplacenoteligible" element={< Marketplacenoteligible/>}/>
+        <Route path ="/Marketplacesignup" element ={<Marketplacesignup/>}/>
+        <Route path ="/Marketplacesignmint" element={<Marketplacesignmint/>}/>
+        <Route path="/Marketplacenoteligible" element={< Marketplacenoteligible/>}/>
         <Route path="/MarketplaceCongratulation" element ={<MarketplaceCongratulation/>}/>
       <Route path="/MoreInfoMinted" element ={<MoreInfoMinted/>}/>
         <Route path="/MarketplaceMinted" element ={<MarketplaceMinted/>}/>
