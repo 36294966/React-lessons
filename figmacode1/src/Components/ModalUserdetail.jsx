@@ -6,7 +6,7 @@ import FormGroup from "@mui/material/FormGroup";
 import IconButton from "@mui/material/IconButton";
 import InputAdornment from "@mui/material/InputAdornment";
 import TextField from "@mui/material/TextField";
-import { X,} from "lucide-react";
+import { X, } from "lucide-react";
 import React, { useRef, useState } from "react";
 
 
@@ -28,7 +28,7 @@ function ReusableInput({
   };
 
   return (
-    <FormControl sx={{ marginTop: -2, m: 1, width: "100%", maxWidth: 1200 }}>
+    <FormControl sx={{ marginTop: -2, m: 2, width: "100%", maxWidth: 1200 }}>
       <TextField
         label={label}
         variant="outlined"
@@ -52,7 +52,7 @@ function ReusableInput({
           endAdornment: showPassword !== undefined && (
             <InputAdornment position="end">
               <IconButton onClick={handleClickShowPassword} edge="end">
-                {/* < Eye/> */}
+                {/* <Eye /> */}
               </IconButton>
             </InputAdornment>
           )
@@ -83,21 +83,16 @@ function Modal({ onClose }) {
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
   const modalRef = useRef();
   const [inputs, setInputs] = useState([
-    { label: "Email address ", type: "text", value: "", showPassword: false },
-    { label: "Username", type: "text", value: "", showPassword: true  },
-    { label: "Password", type: "password", value: "", showPassword: false },
+    { label: "Address ", type: "text", value: "NY 11379,USA", showPassword: false },
+    { label: "ZIP code", type: "text", value: "1234", showPassword: false  },
+    { label: "Date of birth", type: "password", value: "19/02/1984", showPassword: false },
+    { label: "Nationality", type: "password",value: "ARE",showPassword: false},
     {
-      label: "Confirm password",
-      type: "password",
-      value: "",
+      label: "Country of Residence)",
+      type: "text",
+      value: "Wakanda",
       showPassword: false
     },
-    {
-      label: "Referral code(Optional)",
-      type: "text",
-      value: "",
-      showPassword: false
-    }
   ]);
   const [errors, setErrors] = useState({});
   const [checkboxes, setCheckboxes] = useState({
@@ -146,24 +141,24 @@ function Modal({ onClose }) {
     <div
       ref={modalRef}
       onClick={closeModal}
-      className="fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm mx-0-sm flex 
+      className="fixed inset-0 bg-black flex flex-nowrap bg-opacity-30 backdrop-blur-sm mx-0-sm 
       justify-center items-center z-50"
     >
       <div
-        className="relative bg-black border-2 border-white rounded-xl px-4 
+        className="absolute bg-black border-2 w-[900px] h-[610px] border-white rounded-xl px-28 
         py-4 flex flex-col gap-0 items-center"
-        style={{
-          width: isSmallScreen ? "90%" : "auto",
-          maxWidth: isSmallScreen ? "100%" : "900px",
-          margin: isSmallScreen ? "0 16px" : "32px 0"
-        }}
+        // style={{
+        //   width: isSmallScreen ? "90%" : "auto",
+        //   maxWidth: isSmallScreen ? "100%" : "900px",
+        //   margin: isSmallScreen ? "0 16px" : "32px 0"
+        // }}
       >
         <div onClick={onClose} className="absolute top-4 right-4 cursor-pointer">
           <X size={28} className="text-white" />
         </div>
 
         <h1 className="text-3xl font-extrabold h-full underline decoration-red-600 text-white">
-          Sign up
+          User Details
         </h1>
 
         {inputs.map((input, index) => (
@@ -184,55 +179,9 @@ function Modal({ onClose }) {
             error={input.label === "Password" && errors.password}
           />
         ))}
-
-        <FormGroup sx={{ marginTop: 4, alignItems: "flex-start", width: "100%" }}>
-          <FormControlLabel
-            control={
-              <Checkbox
-                checked={checkboxes.newsUpdates}
-                onChange={handleCheckboxChange}
-                name="newsUpdates"
-                sx={{
-                  color: "white",
-                  "&.Mui-checked": {
-                    color: "white"
-                  },
-                  "& .MuiSvgIcon-root": {
-                    backgroundColor: "black",
-                    borderRadius: "50%" 
-                  }
-                }}
-              />
-            }
-            label="I want to receive the latest news and updates by email from Affyn"
-            sx={{ color: "white", whiteSpace: "nowrap" }}
-          />
-          <FormControlLabel
-            control={
-              <Checkbox
-                checked={checkboxes.termsAgree}
-                onChange={handleCheckboxChange}
-                name="termsAgree"
-                sx={{
-                  color: "white",
-                  "&.Mui-checked": {
-                    color: "white"
-                  },
-                  "& .MuiSvgIcon-root": {
-                    backgroundColor: "black",
-                    borderRadius: "50%" 
-                  }
-                }}
-              />
-            }
-            label="I have read and agree to the Terms of Use and Privacy"
-            sx={{ color: "white", whiteSpace: "nowrap" }}
-          />
-        </FormGroup>
-
         <form>
           <button
-            className="mt-4 flex items-center justify-center rounded-full bg-blue-400 w-[250px] h-[65px] text-white"
+            className="mt-4 flex items-center justify-center rounded-full bg-gray-600 w-[250px] h-[65px] text-white"
           >
             Continue
           </button>
@@ -243,5 +192,3 @@ function Modal({ onClose }) {
 }
 
 export default Modal;
-
-

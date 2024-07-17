@@ -87,7 +87,7 @@ function PasswordInput({ password, setPassword, showPassword, setShowPassword })
                                 edge="end"
                                 style={{ color: 'white' }}
                             >
-                                <Eye />
+                                {/* <Eye /> */}
                             </IconButton>
                         </InputAdornment>
                     )

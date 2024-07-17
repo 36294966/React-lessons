@@ -11,12 +11,14 @@ import Marketplacenoteligible from  "./Pages/MINTnoteligible/Marketplacenoteligi
 import Marketplacesignmint from  "./Pages/SignMint/Marketplacesignmint";
 import Marketplacesignup  from "./Pages/Signupmint/Marketplacesignup";
 import Marketplaceverifyopt from "./Pages/Marketplaceverifyopt/Marketplaceverifyopt";
+import Marketplaceuserdetails from "./Pages/UserDetails/Marketplaceuserdetails";
 const App = () => {
   return (
     <Router>
       <Navbar/>
       
       <Routes>
+        <Route path="Marketplaceuserdetails" element ={<Marketplaceuserdetails/>}/>
         <Route path="Marketplaceverifyopt" element ={<Marketplaceverifyopt/>}/>
         <Route path ="/Marketplacesignup" element ={<Marketplacesignup/>}/>
         <Route path ="/Marketplacesignmint" element={<Marketplacesignmint/>}/>
