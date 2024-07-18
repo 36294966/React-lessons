@@ -27,7 +27,12 @@ function ReusableInput({
     setShowPassword && setShowPassword(!showPassword);
   };
 
+
+
+
+
   return (
+   
     <FormControl sx={{ marginTop: -2, m: 2, width: "100%", maxWidth: 1200 }}>
       <TextField
         label={label}
@@ -57,6 +62,7 @@ function ReusableInput({
             </InputAdornment>
           )
         }}
+      
         InputLabelProps={{
           style: { color: "white", whiteSpace: "nowrap" }
         }}
@@ -200,6 +206,7 @@ function Modal({ onClose }) {
         </form>
       </div>
     </div>
+     
   );
 }
 

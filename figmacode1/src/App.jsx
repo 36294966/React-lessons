@@ -12,12 +12,14 @@ import Marketplacesignmint from  "./Pages/SignMint/Marketplacesignmint";
 import Marketplacesignup  from "./Pages/Signupmint/Marketplacesignup";
 import Marketplaceverifyopt from "./Pages/Marketplaceverifyopt/Marketplaceverifyopt";
 import Marketplaceuserdetails from "./Pages/UserDetails/Marketplaceuserdetails";
+import  Marketplacebindwallet from  "./Pages/Bindwallet/Marketplacebindwallet";
 const App = () => {
   return (
     <Router>
       <Navbar/>
       
       <Routes>
+        <Route path ="Marketplacebindwallet" element ={<Marketplacebindwallet/>}/>
         <Route path="Marketplaceuserdetails" element ={<Marketplaceuserdetails/>}/>
         <Route path="Marketplaceverifyopt" element ={<Marketplaceverifyopt/>}/>
         <Route path ="/Marketplacesignup" element ={<Marketplacesignup/>}/>
