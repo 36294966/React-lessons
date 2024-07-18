@@ -1,5 +1,6 @@
-import { X } from "lucide-react"; // Assuming you have an Eye icon for password visibility
+import { X } from "lucide-react"; 
 import React, { useRef } from "react";
+import wallet from "../assets/wallet.png";
 
 function Modal({ onClose }) {
   const modalRef = useRef();
@@ -13,7 +14,7 @@ function Modal({ onClose }) {
     <div
       ref={modalRef}
       onClick={closeModal}
-      className="fixed inset-0 bg-black  bg-opacity-30 backdrop-blur-sm mx-0-sm flex justify-center items-center z-50"
+      className=" inset-0 bg-black whitespace-nowrap absolute bg-opacity-30 backdrop-blur-sm mx-0-sm flex justify-center items-center z-50"
     >
       <div className="relative bg-black w-[1500px] h-[500px] border-2 border-white rounded-xl px-12 py-10 flex flex-col gap-5 items-center mx-72">
         <div
@@ -27,14 +28,16 @@ function Modal({ onClose }) {
           Bind Wallet
         </h1>
         <div className="text-white ">
-          <p className="-mt-40 -ml-32 justify-start items-start">
+          <p className="-mt-40 -ml-48 whitespace-nowrap justify-start items-start">
             Bind you wallet and get full access of you account
           </p>
         </div>
         <form>
-          <div className=" -mt-32 -ml-40">
-            <button className="mt-4 flex items-center text-xl justify-center  rounded-lg border-2 border-orange-500  w-[300px] h-[80px] text-white">
+          <div className=" -mt-32 whitespace-nowrap ">
+            <button className="mt-4 flex items-center text-xl justify-center  rounded-lg border-2 border-pink-500  w-[550px] h-[100px] text-white">
+            <img src="wallet.png" alt="Wallet"/>
               Connect Metamask wallet
+
             </button>
           </div>
         </form>
