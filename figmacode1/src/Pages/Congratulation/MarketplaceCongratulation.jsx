@@ -11,7 +11,7 @@ function App() {
         <div className="bg-blue-950 rounded-lg w-full max-w-[523px] md:w-auto md:max-w-[523px] ml-8">
           <div className="text-start text-blue-600">
             <h2 className="text-3xl font-bold mb-2">GET YOUR OG EDITION</h2>
-            <h2 className="text-3xl font-bold mb-2">MYTHICAL BUDDY!</h2>
+            <h2 className="text-3xont-bold mb-2">MYTHICAL BUDDY!</h2>
           </div>
           <div className="text-white mt-8">
             <p>
